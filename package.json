@@ -1,0 +1,28 @@
+{
+  "name": "x-object",
+  "version": "1.0.3",
+  "description": "JsDK of the Class of Classes Object Class",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+     "coverage": "istanbul cover _mocha -- --ui bdd -R spec -t 5000;open ./coverage/lcov-report/index.html"
+  },
+  "keywords": [
+    "meta-class",
+    "prototype",
+    "jsdk",
+    "kit",
+    "extends"
+  ],
+  "author": "Abdennour TOUMI <http://abdennoor.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "sinon": "^1.17.6"
+  },
+  "dependencies": {
+    "console-error": "0.0.3",
+    "console-info": "0.0.4",
+    "console-warn": "0.0.3"
+  }
+}
