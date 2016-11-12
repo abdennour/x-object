@@ -10,6 +10,21 @@ JsDK of Object Class.
 
 - return another object with the same keys , but this same/different values according to the second argument which is callback accepts two arguments.
 
+```js
+
+Object.map({f:"ab",l:"abc" }, (k, v) => v.length );
+// {f:2, l:3}
+//-------------------
+ let students = {
+   sami : [80,70],
+   ahmed: [90,100]
+ };
+ let average = (k, v) => v.reduce((a, b) => a+b , 0) / v.length ;
+ Object.map(students,average);
+  //{sami:75, ahmed: 95}  
+
+```
+
 ## 2.Object.filter(object, String|Array|RegExp|function)
 
    - Retrieve a sub-object of a current object.
