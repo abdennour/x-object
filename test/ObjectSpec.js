@@ -50,23 +50,18 @@ describe(`Object.filter`, () => {
 describe(`Object.vals`, () => {
  let now = Date.now();
  let context = {
-  now
+  now,
+  fl: 'fd'
  };
- it(`returns an array of object values`, () => {
+ it(`works fine`, () => {
+  let returned = Object.vals(context);
+  expect(returned[1]).toEqual(context.fl);
+ })
+ it(`returns an array of object values with a size equals to keys size`, () => {
   let returned = Object.vals(context);
   expect(returned).toBeAn(Array);
+  expect(returned.length).toEqual(Object.keys(context).length);
  });
- it(`should forward to built-in api"Object.values" if any`, () => {
-
-  let method = sinon.spy();
-  Object.values = function() {
-   method()
-  };
-  Object.vals(context);
-  expect(method.calledOnce).toBeTruthy();
-
- });
-
 
 });
 describe(`Object.belongsTo`, () => {
@@ -171,10 +166,23 @@ describe(`Object.equals`, () => {
    }
   ];
   let first = getComplexObject();
-  let second =getComplexObject();
-  let anti = [[1, 2, 3], {are: "you here",be:"there"}];
-  class Custom {constructor(are,be){this.are=are;this.be=be;return this;} }
-  let anti2 = [[1, 2, 3], new Custom('you here')];
+  let second = getComplexObject();
+  let anti = [
+   [1, 2, 3], {
+    are: "you here",
+    be: "there"
+   }
+  ];
+  class Custom {
+   constructor(are, be) {
+    this.are = are;
+    this.be = be;
+    return this;
+   }
+  }
+  let anti2 = [
+   [1, 2, 3], new Custom('you here')
+  ];
   expect(Object.equals(first, second)).toBeTruthy();
   expect(Object.equals(first, anti)).toBeFalsy();
   expect(Object.equals(first, anti2)).toBeFalsy();

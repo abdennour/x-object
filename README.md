@@ -1,8 +1,28 @@
-![](https://coveralls.io/repos/github/abdennour/x-object/badge.svg)
 # Overview :
 
 JsDK of Object Class.
 
+# How to use :
+
+## 1. Extend Object Class :
+
+```js
+require(`x-object`);
+// import 'x-object';
+//then :
+Object.filter(object,['a', 'b']);
+//........
+```
+
+## 2. Import safe :
+
+```js
+const XObject = require('x-object/safe');
+// import XObject from 'x-object/safe';
+//then :
+XObject.filter(object,['a', 'b']);
+//........
+```
 #  Methods :
 
 
@@ -62,46 +82,50 @@ Object.map({f:"ab",l:"abc" }, (k, v) => v.length );
 
 # Unit tests :
 
+![Coverage X-object](https://raw.githubusercontent.com/abdennour/spl/master/js/Screen%20Shot%201438-02-13%20at%2011.27.09%20PM.png)
 
 ```
+Filter Class
+  ✓ contains 4 non-static methods
+  ✓ runs "byKey" method prefectly
+  ✓ runs "byKeys" method prefectly
+  ✓ runs "byRegExp" method prefectly by matching all keys ends with "name"
+  ✓ runs "byCallback" method prefectly
 
-  Filter Class
-    ✓ contains 4 non-static methods
-    ✓ runs "byKey" method prefectly
-    ✓ runs "byKeys" method prefectly
-    ✓ runs "byRegExp" method prefectly by matching all keys ends with "name"
-    ✓ runs "byCallback" method prefectly
+Fitler#execute Method
+  ✓ must forwards call to "byKey" whenever the argument is instance of "String class"
+  ✓ must forwards call to "byKeys" whenever the argument is instance of "Array Class"
+  ✓ must forwards call to "byRegExp" whenever the argument is regular expression
+  ✓ must forwards call to "byCallback" whenever the argument is callback
+  ✓ must return the same object if no argument is given
+  ✓ must throw exception whenever the argument is not belong to one of  the previous classes (String, Array, RegExp, Function)
 
-  Fitler#execute Method
-    ✓ must forwards call to "byKey" whenever the argument is instance of "String class"
-    ✓ must forwards call to "byKeys" whenever the argument is instance of "Array Class"
-    ✓ must forwards call to "byRegExp" whenever the argument is regular expression
-    ✓ must forwards call to "byCallback" whenever the argument is callback
-    ✓ must return the same object if no argument is given
-    ✓ must throw exception whenever the argument is not belong to one of  the previous classes (String, Array, RegExp, Function)
+Object.map
+  ✓ returns an object with the same keys of target object
+  ✓ calls the callback for each keys' iteration
 
-  Object.map
-    ✓ returns an object with the same keys of target object
-    ✓ calls the callback for each keys' iteration
+Object.filter
+  ✓ returns an object with 1 key whenever the 2nd arg is string & this key is belongs to keys of the target object
+  ✓ returns an object with 2 key whenever the 2nd arg is string & keys  belong to keys of the target object
 
-  Object.filter
-    ✓ returns an object with 1 key whenever the 2nd arg is string & this key is belongs to keys of the target object
-    ✓ returns an object with 2 key whenever the 2nd arg is string & keys  belong to keys of the target object
+Object.vals
+  ✓ works fine
+  ✓ returns an array of object values with a size equals to keys size
 
-  Object.vals
-    ✓ returns an array of object values
-    ✓ should forward to built-in api"Object.values" if any
+Object.belongsTo
+  ✓ check if the 1st argument is SUB-OBJECT of the 2nd argument
 
-  Object.belongsTo
-    ✓ check if the 1st argument is SUB-OBJECT of the 2nd argument
+Object.equals
+  ✓ checks the equality of two strings
+  ✓ checks the equality of two arrays
+  ✓ checks the equality of two literal objects
+  ✓ checks the equality of two dates
+  ✓ checks the equality of two complex objects
 
-  Object.equals
-    ✓ checks the equality of two strings
-    ✓ checks the equality of two arrays
-    ✓ checks the equality of two literal objects
-    ✓ checks the equality of two dates
-    ✓ checks the equality of two complex objects
+Safe Import
+  ✓ prevents the Object class from extension
+  ✓ extends the Object class whenever "x-object" is imported
 
 
-  23 passing (29ms)
+25 passing (24ms)
 ```
