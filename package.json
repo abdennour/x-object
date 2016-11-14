@@ -1,6 +1,6 @@
 {
   "name": "x-object",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "JsDK of the Class of Classes Object Class",
   "main": "index.js",
   "scripts": {
