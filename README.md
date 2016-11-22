@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/abdennour/x-object.svg?branch=master)](https://travis-ci.org/abdennour/x-object)
-[![Coverage Status](https://coveralls.io/repos/github/abdennour/x-object/badge.svg?branch=master)](https://coveralls.io/github/abdennour/x-object?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/abdennour/x-object/badge.svg?branch=master)](https://coveralls.io/github/abdennour/x-object?branch=master&v=1)
 
 # Overview :
 
