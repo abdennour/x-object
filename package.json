@@ -1,11 +1,11 @@
 {
   "name": "x-object",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "JsDK of the Class of Classes Object Class",
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
-     "coverage": "istanbul cover _mocha -- --ui bdd -R spec -t 5000;open ./coverage/lcov-report/index.html"
+    "coverage": "istanbul cover _mocha -- --ui bdd -R spec -t 5000;open ./coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "git",

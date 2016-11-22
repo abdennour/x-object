@@ -9,10 +9,20 @@ JsDK of Object Class.
 ```js
 require(`x-object`);
 // import 'x-object';
+
 //then :
-Object.filter(object,['a', 'b']);
+var object ={a:1, b:2, c:3};
+var whitelist = ['a', 'b']
+Object.filter(object, whitelist);
+// {a:1, b:2}
+
+//-----------Opposite of filter (blacklist)
+var blacklist = ['a', 'b']
+Object.filter(object, (k, v) => !blacklist.includes(k))
+// {c:3}
 //........
 ```
+
 
 ## 2. Import safe :
 
