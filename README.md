@@ -1,6 +1,8 @@
+[![Build Status](https://travis-ci.org/abdennour/x-object.svg?branch=master)](https://travis-ci.org/abdennour/x-object)
+
 # Overview :
 
-JsDK of Object Class.
+JsDK (JS dev kit) of Object Class.
 
 # How to use :
 
