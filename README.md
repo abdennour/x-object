@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/abdennour/x-object.svg?branch=master)](https://travis-ci.org/abdennour/x-object)
-[![Coverage Status](https://coveralls.io/repos/github/abdennour/x-object/badge.svg?branch=master)](https://coveralls.io/github/abdennour/x-object?branch=master&v=1)
+[![Coverage Status](https://coveralls.io/repos/github/abdennour/x-object/badge.svg?branch=master)](https://coveralls.io/github/abdennour/x-object?branch=master)
 
 # Overview :
 
@@ -95,7 +95,7 @@ Object.map({f:"ab",l:"abc" }, (k, v) => v.length );
 
 # Unit tests :
 
-![Coverage X-object](https://raw.githubusercontent.com/abdennour/spl/master/js/Screen%20Shot%201438-02-13%20at%2011.27.09%20PM.png)
+![Coverage X-object](https://raw.githubusercontent.com/rathath/bucket/master/img/Screen%20Shot%201438-02-13%20at%2011.27.09%20PM.png)
 
 ```
 Filter Class
